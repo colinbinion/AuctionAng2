@@ -6,9 +6,9 @@ import {Component,  Input, OnInit} from '@angular/core'; // <1>
   selector: 'auction-stars'
 })
 export default class StarsComponent implements OnInit {
-  @Input() count: number = 5; // <1>
-  @Input() rating: number = 0; // <2>
-  stars: boolean[] = []; // <3>
+  @Input() count: number = 5;
+  @Input() rating: number = 0;
+  stars: boolean[] = [];
 
   ngOnInit() { // <4>
     for (let i = 1; i <= this.count; i++) {
