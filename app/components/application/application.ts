@@ -1,5 +1,4 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {Product, ProductService} from '../../services/product-service';
 
 @Component({
   selector: 'auction-application',
@@ -8,10 +7,4 @@ import {Product, ProductService} from '../../services/product-service';
   encapsulation:ViewEncapsulation.None
 })
 
-export default class ApplicationComponent {
-  products: Array<Product> = [];
-
-  constructor(private productService: ProductService) {
-    this.products = this.productService.getProducts();
-  }
-}
+export default class ApplicationComponent {}
