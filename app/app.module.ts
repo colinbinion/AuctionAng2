@@ -14,7 +14,10 @@ import HomeComponent from "./components/home/home";
 import ProductDetailComponent from "./components/product-detail/product-detail";
 
 @NgModule({
-    imports:      [ BrowserModule ],
+    imports:      [ BrowserModule, RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'products/:productId', component: ProductDetailComponent}
+    ]) ],
     declarations: [ ApplicationComponent,
                     CarouselComponent,
                     FooterComponent,
